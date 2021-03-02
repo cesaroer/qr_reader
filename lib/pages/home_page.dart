@@ -41,6 +41,7 @@ class _HomePageBody extends StatelessWidget {
     final temoScan = new ScanModel(valor: "http://google.com");
     //DBProvider.db.nuevoScan(temoScan); //Insersión
     //DBProvider.db.getScanByID(2).then((value) => print(value.valor));
+    DBProvider.db.deleteAllScan().then(print);
 
     switch (currentIndex) {
       case 0:
