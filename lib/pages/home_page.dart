@@ -18,7 +18,12 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(Icons.delete_forever),
-            onPressed: (() {}),
+            onPressed: (() {
+              //Si el provider esta dentro de una funcion que se dispara con un button va en false
+              //Si estuviera en un build si se puede redibujar
+              Provider.of<ScanListService>(context, listen: false)
+                  .borrarTodos();
+            }),
           ),
         ],
       ),
